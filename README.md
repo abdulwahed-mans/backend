@@ -48,4 +48,10 @@ $ docker-compose up -d --build
 $ docker-compose exec web python manage.py migrate
 $ docker-compose exec web python manage.py createsuperuser
 # Load the site at http://127.0.0.1:8000
+
+# To push to Docker hub
+docker build -t abedulwahed/backend:djangoX .
+docker tag abedulwahed/backend:djangoX abedulwahed/backend:latest
+docker push abedulwahed/backend:djangoX
+
 ```
